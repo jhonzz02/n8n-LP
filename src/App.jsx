@@ -80,21 +80,34 @@ function App() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-8 mt-16 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">10k+</div>
-              <div className="text-gray-400 text-sm">Empresas</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">24/7</div>
-              <div className="text-gray-400 text-sm">Suporte</div>
+          <div className="flex flex-col gap-8 mt-16 max-w-3xl mx-auto">
+            <h1 className=" text-white font-bold text-4xl">
+              Empresas parceiras
+            </h1>
+            {/* empresas */}
+            <div className="flex gap-12 items-center justify-center">
+              <img
+                src={"/src/assets/caco.png"}
+                alt="VTJ System Flows Logo"
+                className="h-24 w-24 rounded-full object-cover"
+              />
+              <img
+                src={"/src/assets/power.jpg"}
+                alt="VTJ System Flows Logo"
+                className="h-24 w-24 rounded-full object-cover"
+              />
+              <img
+                src={"/src/assets/mayth.png"}
+                alt="VTJ System Flows Logo"
+                className="h-24 w-24 rounded-full object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="container mx-auto px-6 py-20">
+      {/* Recursos Section */}
+      <section id="features" className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text ">
             Recursos Poderosos
@@ -153,7 +166,10 @@ function App() {
         {/* Additional Features */}
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-primary/50 transition-all duration-300 card-hover">
-            <div className="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <div
+              className="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 float-animation"
+              style={{ animationDelay: "1s" }}
+            >
               <Shield className="h-8 w-8 text-secondary" />
             </div>
             <h3 className="text-2xl font-bold mb-4 ">Segurança Total</h3>
@@ -164,7 +180,10 @@ function App() {
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-primary/50 transition-all duration-300 card-hover">
-            <div className="bg-accent/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <div
+              className="bg-accent/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 float-animation"
+              style={{ animationDelay: "1s" }}
+            >
               <Clock className="h-8 w-8 text-accent" />
             </div>
             <h3 className="text-2xl font-bold mb-4 ">Análises em Tempo Real</h3>
@@ -175,7 +194,10 @@ function App() {
           </div>
 
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-primary/50 transition-all duration-300 card-hover">
-            <div className="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <div
+              className="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 float-animation"
+              style={{ animationDelay: "1s" }}
+            >
               <Users className="h-8 w-8 text-secondary" />
             </div>
             <h3 className="text-2xl font-bold mb-4 ">Equipe Colaborativa</h3>
@@ -199,7 +221,7 @@ function App() {
                 <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2 ">
-                    Aumento de 300% na Eficiência
+                    Aumento de até 300% na Eficiência
                   </h3>
                   <p className="text-gray-300 ">
                     Automatize tarefas repetitivas e foque no que realmente
@@ -214,8 +236,8 @@ function App() {
                     Disponibilidade 24/7
                   </h3>
                   <p className="text-gray-300 ">
-                    Seus clientes recebem atendimento instantâneo a qualquer
-                    hora do dia ou da noite.
+                    Atendimento instantâneo para seus clientes, 24h por dia, com
+                    nossa equipe de suporte.
                   </p>
                 </div>
               </div>
@@ -226,8 +248,8 @@ function App() {
                     Integração Simples
                   </h3>
                   <p className="text-gray-300 ">
-                    Configure em minutos, sem necessidade de conhecimento
-                    técnico avançado.
+                    Integração rápida, feita por quem entende. Deixe tudo com a
+                    gente.
                   </p>
                 </div>
               </div>
@@ -291,16 +313,11 @@ function App() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg btn-glow"
-              >
-                Começar Teste Grátis
-              </Button>
-              <Button
-                size="lg"
                 variant="outline"
-                className="border-gray-600 text-white hover:bg-gray-800 px-8 py-4 text-lg"
+                className="border-gray-600 text-white font-bold hover:bg-[#d400ff] px-8 py-4 text-lg group bg-[#0c9ebe] hover:cursor-pointer"
               >
                 Falar com Especialista
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
@@ -308,7 +325,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="container mx-auto px-6 py-12 border-t border-slate-700">
+      <footer className="container mx-auto px-6 py-12 border-t border-slate-700 text-white">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -318,22 +335,17 @@ function App() {
                 className="h-8 w-auto"
               />
             </div>
-            <p className="text-gray-400 ">
+            <p className="">
               Automação inteligente para WhatsApp que transforma seu
               atendimento.
             </p>
           </div>
           <div>
             <h3 className="font-semibold mb-4 ">Produto</h3>
-            <ul className="space-y-2 text-gray-400 ">
+            <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Recursos
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Preços
                 </a>
               </li>
               <li>
@@ -345,12 +357,7 @@ function App() {
           </div>
           <div>
             <h3 className="font-semibold mb-4 ">Suporte</h3>
-            <ul className="space-y-2 text-gray-400 ">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Documentação
-                </a>
-              </li>
+            <ul className="space-y-2 ">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Tutoriais
@@ -365,27 +372,17 @@ function App() {
           </div>
           <div>
             <h3 className="font-semibold mb-4 ">Empresa</h3>
-            <ul className="space-y-2 text-gray-400 ">
+            <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Sobre
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Carreiras
-                </a>
-              </li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-slate-700 mt-12 pt-8 text-center text-gray-400 ">
-          <p>&copy; 2024 VTJ System Flows. Todos os direitos reservados.</p>
+        <div className="border-t border-slate-700 mt-12 pt-8 text-center">
+          <p>&copy; 2025 VTJ System Flows. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
