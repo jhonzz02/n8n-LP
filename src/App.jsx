@@ -12,6 +12,9 @@ import {
 } from "lucide-react";
 import "./App.css";
 import VTJLogo from "./assets/vtjsystemflows.jpg";
+import CacoImg from "./assets/caco.png";
+import MaythImg from "./assets/mayth.png";
+import PowerImg from "./assets/power.jpg";
 
 function App() {
   return (
@@ -87,18 +90,18 @@ function App() {
             {/* empresas */}
             <div className="flex gap-12 items-center justify-center">
               <img
-                src={"/src/assets/caco.png"}
-                alt="VTJ System Flows Logo"
+                src={CacoImg}
+                alt="Caco Logo"
                 className="h-24 w-24 rounded-full object-cover"
               />
               <img
-                src={"/src/assets/power.jpg"}
-                alt="VTJ System Flows Logo"
+                src={PowerImg}
+                alt="Power Bahia Logo"
                 className="h-24 w-24 rounded-full object-cover"
               />
               <img
-                src={"/src/assets/mayth.png"}
-                alt="VTJ System Flows Logo"
+                src={MaythImg}
+                alt="Mayth Logo"
                 className="h-24 w-24 rounded-full object-cover"
               />
             </div>
