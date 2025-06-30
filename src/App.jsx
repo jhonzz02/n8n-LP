@@ -18,7 +18,7 @@ import PowerImg from "./assets/power.jpg";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,_#5E65FF,_#4482FF,_#5E65FF,_#D300FF)] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#0A0A23] text-white overflow-x-hidden">
       {/* Header */}
       <header className="container mx-auto px-6 py-8 relative z-10">
         <nav className="flex items-center justify-between">
@@ -27,25 +27,68 @@ function App() {
               <img
                 src={VTJLogo}
                 alt="VTJ System Flows Logo"
-                className="h-16 w-auto rounded-full object-cover"
+                className="h-16 w-auto rounded-full object-cover hover:cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
+                onClick={() => window.location.reload()}
               />
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#features"
-              className="hover:text-[#D300FF] transition-colors duration-300"
+              className="font-bold hover:cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault(); // impede o comportamento padrão do link
+                const section = document.getElementById("features");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Recursos
             </a>
             <a
-              href="#contact"
-              className="hover:text-[#D300FF] transition-colors duration-300"
+              href="#additional-features"
+              className="font-bold hover:cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault(); // impede o comportamento padrão do link
+                const section = document.getElementById("additional-features");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Benefícios
+            </a>
+            <a
+              href="#contato"
+              className="font-bold hover:cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+              onClick={(e) => {
+                e.preventDefault(); // impede o comportamento padrão do link
+                const section = document.getElementById("contato");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Contato
             </a>
           </div>
         </nav>
+        <a
+          href="https://wa.me/5571999042609?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 bg-[#25D366] p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-white"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12.04 2c-5.523 0-10 4.477-10 10a9.946 9.946 0 002.151 6.3L2 22l3.796-1.133A9.962 9.962 0 0012.04 22c5.523 0 10-4.477 10-10s-4.477-10-10-10zm.017 17.934a8.041 8.041 0 01-4.074-1.122l-.291-.173-2.716.811.862-2.648-.177-.273a8.013 8.013 0 01-1.232-4.32c0-4.425 3.596-8.021 8.021-8.021 2.144 0 4.158.835 5.672 2.35a7.951 7.951 0 012.35 5.671c0 4.425-3.597 8.021-8.021 8.021zm4.579-5.849c-.25-.124-1.473-.729-1.701-.812-.228-.083-.394-.124-.559.124-.167.25-.641.812-.786.978-.146.167-.29.187-.54.063-.25-.125-1.054-.388-2.008-1.237-.742-.66-1.244-1.476-1.39-1.726-.146-.25-.016-.385.109-.51.113-.112.25-.292.375-.438.125-.146.167-.25.25-.417.083-.166.041-.312-.02-.437-.063-.124-.559-1.35-.766-1.852-.2-.481-.402-.416-.559-.416h-.479c-.166 0-.437.063-.666.312-.228.25-.875.854-.875 2.08 0 1.226.896 2.414 1.021 2.579.125.167 1.762 2.688 4.271 3.77.597.257 1.063.41 1.426.524.598.189 1.143.163 1.572.1.48-.072 1.473-.601 1.679-1.181.207-.58.207-1.077.146-1.18-.063-.104-.229-.167-.48-.292z" />
+          </svg>
+        </a>
       </header>
 
       {/* Hero Section */}
@@ -67,15 +110,17 @@ function App() {
             completa.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* BOTAO TESTE GRATIS */}
-            {/*             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg btn-glow">
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Teste Grátis por 14 Dias
-            </Button> */}
             <Button
               size="lg"
               variant="outline"
-              className="border-gray-600 text-white font-bold hover:bg-[#d400ff] px-8 py-4 text-lg group bg-[#0c9ebe] hover:cursor-pointer"
+              className="border-gray-600 text-white font-bold bg-[#0c9ebe] px-8 py-4 text-lg group hover:bg-[#0c9ebe] hover:cursor-pointer 
+             transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border hover:border-primary/50 backdrop-blur-sm rounded-2xl"
+              onClick={() => {
+                const section = document.getElementById("benefits");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Ver Demonstração
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -167,7 +212,10 @@ function App() {
         </div>
 
         {/* Additional Features */}
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div
+          className="grid md:grid-cols-3 gap-8 mt-12"
+          id="additional-features"
+        >
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-primary/50 transition-all duration-300 card-hover">
             <div
               className="bg-secondary/10 w-16 h-16 rounded-xl flex items-center justify-center mb-6 float-animation"
@@ -213,7 +261,7 @@ function App() {
       </section>
 
       {/* Benefits Section */}
-      <section className="container mx-auto px-6 py-20">
+      <section className="container mx-auto px-6 py-20" id="benefits">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text ">
@@ -302,8 +350,14 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-6 py-20 text-center">
-        <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-3xl p-12 border border-slate-700 relative overflow-hidden">
+      <section
+        className="container mx-auto px-6 py-20 text-center"
+        id="contato"
+      >
+        <div
+          className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-3xl p-12 border border-slate-700 relative overflow-hidden"
+          id="contato"
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 animate-pulse"></div>
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text ">
@@ -317,7 +371,14 @@ function App() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-gray-600 text-white font-bold hover:bg-[#d400ff] px-8 py-4 text-lg group bg-[#0c9ebe] hover:cursor-pointer"
+                className="border-gray-600 text-white font-bold bg-[#0c9ebe] px-8 py-4 text-lg group hover:bg-[#0c9ebe] hover:cursor-pointer 
+             transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border hover:border-primary/50 backdrop-blur-sm rounded-2xl"
+                onClick={() => {
+                  window.open(
+                    "https://wa.me/5571999042609?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!",
+                    "_blank"
+                  );
+                }}
               >
                 Falar com Especialista
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -347,12 +408,32 @@ function App() {
             <h3 className="font-semibold mb-4 ">Produto</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#features"
+                  onClick={(e) => {
+                    e.preventDefault(); // impede o comportamento padrão do link
+                    const section = document.getElementById("features");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"
+                >
                   Recursos
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#benefits"
+                  onClick={(e) => {
+                    e.preventDefault(); // impede o comportamento padrão do link
+                    const section = document.getElementById("benefits");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"
+                >
                   Integrações
                 </a>
               </li>
@@ -362,12 +443,27 @@ function App() {
             <h3 className="font-semibold mb-4 ">Suporte</h3>
             <ul className="space-y-2 ">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#benefits"
+                  onClick={(e) => {
+                    e.preventDefault(); // impede o comportamento padrão do link
+                    const section = document.getElementById("benefits");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"
+                >
                   Tutoriais
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="https://wa.me/5571999042609?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"
+                >
                   Contato
                 </a>
               </li>
@@ -377,7 +473,17 @@ function App() {
             <h3 className="font-semibold mb-4 ">Empresa</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#benefits"
+                  onClick={(e) => {
+                    e.preventDefault(); // impede o comportamento padrão do link
+                    const section = document.getElementById("benefits");
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"
+                >
                   Sobre
                 </a>
               </li>
