@@ -15,6 +15,7 @@ import VTJLogo from "./assets/vtjsystemflows.jpg";
 import CacoImg from "./assets/caco.png";
 import MaythImg from "./assets/mayth.png";
 import PowerImg from "./assets/power.jpg";
+import SectionTutorial from "./components/section.jsx";
 
 function App() {
   return (
@@ -137,17 +138,17 @@ function App() {
               <img
                 src={CacoImg}
                 alt="Caco Logo"
-                className="h-24 w-24 rounded-full object-cover"
+                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
               />
               <img
                 src={PowerImg}
                 alt="Power Bahia Logo"
-                className="h-24 w-24 rounded-full object-cover"
+                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
               />
               <img
                 src={MaythImg}
                 alt="Mayth Logo"
-                className="h-24 w-24 rounded-full object-cover"
+                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
               />
             </div>
           </div>
@@ -388,10 +389,12 @@ function App() {
         </div>
       </section>
 
+      <SectionTutorial />
+
       {/* Footer */}
-      <footer className="container mx-auto px-6 py-12 border-t border-slate-700 text-white">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div>
+      <footer className="container mx-auto text-white">
+        <div className="border-t border-slate-700 px-6 py-12 flex max-lg:flex-col max-lg:gap-8 justify-between ">
+          <div className="max-w-[400px] min-w-[200px]">
             <div className="flex items-center space-x-2 mb-4">
               <img
                 src={VTJLogo}
@@ -400,11 +403,11 @@ function App() {
               />
             </div>
             <p className="">
-              Automação inteligente para WhatsApp que transforma seu
-              atendimento.
+              Automação inteligente para WhatsApp <br/> 
+              que transforma seu atendimento.
             </p>
           </div>
-          <div>
+          <div className="max-w-[400px] min-w-[200px]">
             <h3 className="font-semibold mb-4 ">Produto</h3>
             <ul className="space-y-2">
               <li>
@@ -439,15 +442,15 @@ function App() {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="max-w-[400px] min-w-[200px]">
             <h3 className="font-semibold mb-4 ">Suporte</h3>
             <ul className="space-y-2 ">
               <li>
                 <a
-                  href="#benefits"
+                  href="#tutorial"
                   onClick={(e) => {
                     e.preventDefault(); // impede o comportamento padrão do link
-                    const section = document.getElementById("benefits");
+                    const section = document.getElementById("tutorial");
                     if (section) {
                       section.scrollIntoView({ behavior: "smooth" });
                     }
@@ -469,28 +472,10 @@ function App() {
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-semibold mb-4 ">Empresa</h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#benefits"
-                  onClick={(e) => {
-                    e.preventDefault(); // impede o comportamento padrão do link
-                    const section = document.getElementById("benefits");
-                    if (section) {
-                      section.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
-                  className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"
-                >
-                  Sobre
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
-        <div className="border-t border-slate-700 mt-12 pt-8 text-center">
+
+        {/* copyright */}
+        <div className="border-t border-slate-700 mt-12 pt-8 pb-4 text-center">
           <p>&copy; 2025 VTJ System Flows. Todos os direitos reservados.</p>
         </div>
       </footer>
