@@ -186,4 +186,32 @@
   font-weight: 500;
 }
 
+/* Estilo para scrollbar discreto */
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.35) transparent; /* thumb mais visível */
+
+  /* para Firefox */
+}
+
+/* Webkit */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px; /* um pouco maior para facilitar visualização */
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.35); /* mais escuro para sugestão */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* ao passar o mouse fica mais visível */
+}
+
 

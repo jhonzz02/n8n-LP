@@ -4,9 +4,9 @@ import React from "react";
 export default function SectionTutorial() {
   return (
     <div className="container mx-auto px-6 py-20" id="tutorial">
-      <div className="flex gap-16 justify-between">
+      <div className="flex gap-16 justify-between max-lg:flex-col">
         {/* VIDEO */}
-        <div className="w-1/2">
+        <div className="w-1/2 max-lg:w-full">
           <video className="w-full rounded-lg h-[476px]" controls autoPlay muted>
             <source src="https://www.seusite.com/video.mp4" type="video/mp4" />
             Seu navegador não suporta vídeo.
@@ -14,7 +14,7 @@ export default function SectionTutorial() {
         </div>
 
         {/* TEXT */}
-        <div className="w-1/2">
+        <div className="w-1/2 max-lg:w-full">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text ">
             Funcionalidades
           </h2>
