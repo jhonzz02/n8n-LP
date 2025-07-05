@@ -4,7 +4,7 @@ import React from "react";
 export default function SectionTutorial() {
   return (
     <div className="container mx-auto px-6 py-20" id="tutorial">
-      <div className="flex gap-6 justify-between">
+      <div className="flex gap-16 justify-between">
         {/* VIDEO */}
         <div className="w-1/2">
           <video className="w-full rounded-lg h-[476px]" controls autoPlay muted>
