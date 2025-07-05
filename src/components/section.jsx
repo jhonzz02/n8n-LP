@@ -7,28 +7,54 @@ export default function SectionTutorial() {
       <div className="flex gap-6 justify-between">
         {/* VIDEO */}
         <div className="w-1/2">
-          <img
-            src={""}
-            alt=""
-            className="bg-white"
-          />
+          <img src={""} alt="" className="bg-white" />
         </div>
         {/* TEXT */}
         <div className="w-1/2">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 gradient-text ">
-            SESSAO TUTORIAL
+            Funcionalidades
           </h2>
           <div className="space-y-6">
             <div className="flex items-start space-x-4 group">
               <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
               <div>
-                <h3 className="text-xl font-semibold mb-2 ">
-                  Aumento de até 300% na Eficiência
-                </h3>
-                <p className="text-gray-300 ">
-                  Automatize tarefas repetitivas e foque no que realmente
-                  importa para seu negócio.
-                </p>
+                <h3 className="text-xl font-semibold mb-2 ">Lembrete automatico do agendamento com o cliente</h3>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4 group">
+              <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2 ">Atendimento 24/7</h3>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4 group">
+              <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2 ">Envio de audios</h3>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4 group">
+              <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2 ">Possibilidade de multiplas unidades</h3>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4 group">
+              <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2 ">Taxas de clientes, agendamentos e mensagens</h3>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4 group">
+              <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2 ">Monitoramento ao vivo da qualidade do atendimento</h3>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4 group">
+              <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <div>
+                <h3 className="text-xl font-semibold mb-2 ">Entre diversas outras funcionalidades</h3>
               </div>
             </div>
           </div>
