@@ -43,26 +43,25 @@ export default function SubHeader() {
           </Button>
         </div>
 
-        {/* Stats */}
         <div className="flex flex-col gap-8 mt-16 max-w-3xl mx-auto">
           <h1 className=" text-white font-bold text-4xl">Empresas parceiras</h1>
           {/* empresas */}
-          <div className="w-full max-w-full overflow-x-auto px-4 pb-6 scrollbar-thin">
+          <div className="w-full max-sm:overflow-x-auto px-4 pb-6 scrollbar-thin">
             <div className="flex gap-12 items-center min-w-max max-[400px]:justify-start justify-center">
               <img
                 src={CacoImg}
                 alt="Caco Logo"
-                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
+                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform min-sm:hover:-translate-y-1 min-sm:hover:scale-105 hover:cursor-pointer backdrop-blur-sm"
               />
               <img
                 src={PowerImg}
                 alt="Power Bahia Logo"
-                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
+                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform min-sm:hover:-translate-y-1 min-sm:hover:scale-105 hover:cursor-pointer backdrop-blur-sm"
               />
               <img
                 src={MaythImg}
                 alt="Mayth Logo"
-                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
+                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform min-sm:hover:-translate-y-1 min-sm:hover:scale-105 hover:cursor-pointer backdrop-blur-sm"
               />
             </div>
           </div>
