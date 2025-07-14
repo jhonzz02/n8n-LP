@@ -7,9 +7,13 @@ export default function SectionTutorial() {
       <div className="flex gap-16 justify-between max-lg:flex-col">
         {/* VIDEO */}
         <div className="w-1/2 max-lg:w-full">
-          <video className="w-full rounded-lg h-[476px]" controls autoPlay muted>
-            <source src="https://www.seusite.com/video.mp4" type="video/mp4" />
-            Seu navegador não suporta vídeo.
+          <video
+            className="w-full rounded-lg h-[476px]"
+            controls
+            autoPlay
+            muted={false}
+          >
+            <source src="/tutorial.mp4" type="video/mp4" />
           </video>
         </div>
 
