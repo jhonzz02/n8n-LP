@@ -3,12 +3,12 @@ import React from "react";
 
 export default function SectionTutorial() {
   return (
-    <div className="container mx-auto px-6 py-20" id="tutorial">
+    <div className="container mx-auto px-6" id="tutorial">
       <div className="flex gap-16 justify-between max-lg:flex-col">
         {/* VIDEO */}
         <div className="w-1/2 max-lg:w-full">
           <video
-            className="w-full rounded-lg h-[476px]"
+            className="w-full rounded-lg min-sm:h-[476px]"
             controls
             autoPlay
             muted={false}

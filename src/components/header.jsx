@@ -12,7 +12,7 @@ export default function Header() {
               <img
                 src={VTJLogo}
                 alt="VTJ System Flows Logo"
-                className="h-16 w-auto rounded-full object-cover hover:cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
+                className="h-24 w-auto rounded-full object-cover hover:cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm"
                 onClick={() => window.location.reload()}
               />
             </div>
