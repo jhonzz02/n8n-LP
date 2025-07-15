@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 export default function SubHeader() {
   return (
     <section className="container mx-auto px-6 py-20 text-center relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-3xl"></div>
+      <div className="absolute z-0 inset-0 bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-3xl"></div>
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="float-animation mb-8">
           <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium">
