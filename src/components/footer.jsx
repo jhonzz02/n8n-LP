@@ -59,7 +59,7 @@ export default function Footer() {
           <ul className="space-y-2 ">
             <li>
               <a
-                href="https://wa.me/5571999042609?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
+                href="https://wa.me/5571997364243?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"
@@ -69,7 +69,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://wa.me/5571999042609?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
+                href="https://wa.me/5571997364243?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer hover:text-[#d400ff] transition-colors duration-300"

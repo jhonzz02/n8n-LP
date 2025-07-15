@@ -1,7 +1,7 @@
 export default function IconWhats() {
   return (
         <a
-          href="https://wa.me/5571999042609?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
+          href="https://wa.me/5571997364243?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-[9999] transform translate-y-0 bg-[#25D366] p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition-all duration-300"

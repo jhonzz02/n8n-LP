@@ -33,7 +33,7 @@ export default function CTA() {
              transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border hover:border-primary/50 backdrop-blur-sm rounded-2xl px-8 py-4"
               onClick={() => {
                 window.open(
-                  "https://wa.me/5571999042609?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!",
+                  "https://wa.me/5571997364243?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20saber%20mais!",
                   "_blank"
                 );
               }}
