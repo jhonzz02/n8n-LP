@@ -32,7 +32,7 @@ export default function SubHeader() {
             className="border-gray-600 text-white font-bold bg-[#0c9ebe] px-8 py-4 text-lg group hover:bg-[#0c9ebe] hover:cursor-pointer 
              transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 border hover:border-primary/50 backdrop-blur-sm rounded-2xl"
             onClick={() => {
-              const section = document.getElementById("benefits");
+              const section = document.getElementById("tutorial");
               if (section) {
                 section.scrollIntoView({ behavior: "smooth" });
               }
