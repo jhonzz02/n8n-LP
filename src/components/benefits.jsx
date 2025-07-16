@@ -32,7 +32,7 @@ export default function Benefits() {
                 </h3>
                 <p className="text-gray-300 ">
                   Ofereça suporte imediato aos seus clientes, a qualquer hora do
-                  dia — com uma IA treinada para responder de forma precisa e
+                  dia com uma IA treinada para responder de forma precisa e
                   humanizada.
                 </p>
               </div>
