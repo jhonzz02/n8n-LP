@@ -3,6 +3,9 @@ import "../App.css";
 import CacoImg from "../assets/caco.png";
 import MaythImg from "../assets/mayth.png";
 import PowerImg from "../assets/power.jpg";
+import OLK from "../assets/olk.jpg";
+import Propelloo from "../assets/propelloo.jpg";
+import R4S from "../assets/r4s.jpg";
 import { Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
@@ -46,23 +49,33 @@ export default function SubHeader() {
         <div className="flex flex-col gap-8 mt-16 max-w-3xl mx-auto">
           <h1 className=" text-white font-bold text-4xl">Empresas parceiras</h1>
           {/* empresas */}
-          <div className="w-full max-sm:overflow-x-auto px-4 pb-6 scrollbar-thin">
-            <div className="flex gap-12 items-center min-w-max max-[400px]:justify-start justify-center">
-              <img
-                src={CacoImg}
-                alt="Caco Logo"
-                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform min-sm:hover:-translate-y-1 min-sm:hover:scale-105 hover:cursor-pointer backdrop-blur-sm"
-              />
-              <img
-                src={PowerImg}
-                alt="Power Bahia Logo"
-                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform min-sm:hover:-translate-y-1 min-sm:hover:scale-105 hover:cursor-pointer backdrop-blur-sm"
-              />
-              <img
-                src={MaythImg}
-                alt="Mayth Logo"
-                className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform min-sm:hover:-translate-y-1 min-sm:hover:scale-105 hover:cursor-pointer backdrop-blur-sm"
-              />
+          <div className="relative w-full overflow-hidden px-4 py-6 mask-fade">
+            <div className="pointer-events-none absolute top-0 left-0 w-12 h-full backdrop-blur-sm z-10"></div>
+            <div className="pointer-events-none absolute top-0 right-0 w-12 h-full backdrop-blur-sm z-10"></div>
+            {/* logos */}
+            <div className="flex gap-12 items-center min-w-max animate-scroll overflow-visible">
+              {[
+                CacoImg,
+                PowerImg,
+                MaythImg,
+                OLK,
+                R4S,
+                Propelloo,
+                CacoImg,
+                PowerImg,
+                MaythImg,
+                OLK,
+                R4S,
+                Propelloo,
+              ].map((logo, i) => (
+                <div key={i} className="flex-shrink-0">
+                  <img
+                    src={logo}
+                    alt="Logo Empresa"
+                    className="h-24 w-24 rounded-full object-cover transition-all duration-300 transform min-sm:hover:-translate-y-1 min-sm:hover:scale-105 hover:cursor-pointer backdrop-blur-sm"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
